@@ -5,6 +5,7 @@ import { ForcolComponent } from './views/forcol/forcol.component';
 import { SupplyComponent } from './views/supply/supply.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'forcol', component: ForcolComponent, data: { title: 'Forcol' } },
   { path: 'supply', component: SupplyComponent, data: { title: 'Supply' } },
