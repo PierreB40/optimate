@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,9 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 
 export class ToolbarComponent implements OnInit {
   constructor( private route: ActivatedRoute) {}
-  title = ''
+  title = '';
+  links: MenuItem[];
   ngOnInit() {
     this.title = this.route.snapshot.data['title'];
+    this.links = [
+      {label: 'Supply', url: '/supply'},
+      {label: 'Forcol', url: '/forcol' },
+      {label: 'Login', url: '/login'}
+  ];
   }
 
 }

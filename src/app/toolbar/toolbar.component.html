@@ -16,7 +16,8 @@
 
 <p-menubar>
   <ng-template pTemplate="start">
-    <p-button icon="pi pi-bars"></p-button>
+    <p-menu #menu [popup]="true" [model]="links"></p-menu>
+    <button type="button" pButton icon="pi pi-bars" (click)="menu.toggle($event)"></button>
     <img class="p-ml-2" src="https://via.placeholder.com/100x40" alt="">
     <div class="title p-ml-3">{{ title }}</div>
   </ng-template>
