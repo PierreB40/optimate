@@ -1,1 +1,64 @@
-<p-dropdown [options]="books" [(ngModel)]="selectedBook" optionLabel="name"></p-dropdown>
+<style>
+  .grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "image image login login"
+      "image image login login"
+      "image image login login";
+  }
+
+  .image {
+    grid-area: image;
+    background: no-repeat url("assets/LoginBackground.png");
+    background-size: cover;
+  }
+
+  .login {
+    grid-area: login;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loginBtn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  input,
+  label {
+    display: block;
+  }
+</style>
+<div class="grid-container">
+  <div class="image"></div>
+  <div class="login">
+    <p-card [style]="{'width': '550px', 'position': 'relative'}">
+      <ng-template pTemplate="header">
+        Connexion
+      </ng-template>
+      <div class="p-field p-grid">
+        <label for="identifiant" class="p-col-fixed" style="width:150px">Identifiant</label>
+        <i class="pi pi-user"></i>
+        <div class="p-col">
+          <input id="identifiant" type="text" placeholder="Saissisez votre identifiant" pInputText>
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <label for="password" class="p-col-fixed" style="width:150px">Mot de passe</label>
+        <i class="pi pi-lock"></i>
+        <div class="p-col">
+          <input id="password" type="text" placeholder="Saissisez votre mot de passe" pInputText>
+        </div>
+      </div>
+      <a routerLink="/forcol" routerLinkActive="active">
+        <button label="Valider" pButton type="button" class="loginBtn p-button-rounded p-ml-2"></button>
+      </a>
+    </p-card>
+  </div>
+</div>
