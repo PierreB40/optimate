@@ -1,0 +1,26 @@
+<style>
+  :host >>> .p-menubar-start , :host >>> .p-menubar-end {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    width: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-left: 2px solid black;
+  }
+</style>
+
+<p-menubar>
+  <ng-template pTemplate="start">
+    <p-button icon="pi pi-bars"></p-button>
+    <img class="p-ml-2" src="https://via.placeholder.com/100x40" alt="">
+    <div class="title p-ml-3">{{ title }}</div>
+  </ng-template>
+  <img class="logo" src="https://via.placeholder.com/100x40" alt="">
+  <button label="M. Azoulay" pButton type="button" class="p-button-rounded p-ml-2"></button>
+  <button pButton type="button" icon="pi pi-info-circle" class="p-button-rounded p-ml-2"></button>
+</p-menubar>
