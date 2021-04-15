@@ -15,9 +15,9 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
     this.title = this.route.snapshot.data['title'];
     this.links = [
-      {label: 'Supply', url: '/supply'},
-      {label: 'Forcol', url: '/forcol' },
-      {label: 'Login', url: '/login'}
+      {label: 'Supply', routerLink: ['/supply'] },
+      {label: 'Forcol', routerLink: ['/forcol'] },
+      {label: 'Login', routerLink: ['/login'] }
   ];
   }
 
