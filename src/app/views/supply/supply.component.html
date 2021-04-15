@@ -1,1 +1,24 @@
 <app-toolbar></app-toolbar>
+<button label="Filtres" icon="pi pi-filter" iconPos="left" pButton type="button" class="p-button-rounded p-ml-2"></button>
+<div style="float: right">
+  <input type="text" placeholder="Recherche..." pInputText />
+  <button icon="pi pi-search" pButton type="button"></button>
+</div>
+<p-table>
+  <ng-template pTemplate="header">
+      <tr>
+          <th>FAMILLE</th>
+          <th>CODE MODELE</th>
+          <th>LIBELLE</th>
+          <th>COLORI</th>
+          <th>Prévision Tournée</th>
+          <th>Commandes</th>
+          <th>OA en cours</th>
+          <th>OA validés</th>
+          <th>Statut</th>
+          <th>Nouveau CA validé</th>
+          <th>Commentaires</th>
+          <th>OA à passer</th>
+      </tr>
+  </ng-template>
+</p-table>

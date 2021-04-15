@@ -15,6 +15,8 @@ import { SupplyComponent } from './views/supply/supply.component';
 import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
+import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     MenubarModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    TableModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
